@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import { useRouter } from "next/router";
 import Head from 'next/head';
+import Link from 'next/link';
 
 
 function MyApp({ Component, pageProps }) {
@@ -12,24 +13,35 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="THis is bebaha web app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="text-gray-600 body-font">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <header className="text-gray-100 body-font relative mb-4 h-16 bg-cyan-600">
+        <div className="container mx-auto flex flex-wrap py-3 flex-col md:flex-row items-center fixed top-0 right-0 left-0">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span className="ml-3 text-xl">Tailblocks</span>
+            <Link href="/" passHref>
+              <a className=' font-bold ml-3 text-3xl'>Shawarmer</a>
+            </Link>
+
           </a>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5 hover:text-gray-900">First Link</a>
-            <a className="mr-5 hover:text-gray-900">Second Link</a>
-            <a className="mr-5 hover:text-gray-900">Third Link</a>
-            <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+
+            <Link href="/" passHref>
+              <a className='mr-5 hover:text-gray-900 font-bold'>Home</a>
+            </Link>
+            <Link href="/" passHref>
+              <a className='mr-5 hover:text-gray-900 font-bold'>Knowlage books</a>
+            </Link>
+            <Link href="/" passHref>
+              <a className='mr-5 hover:text-gray-900 font-bold'>HR</a>
+            </Link>
           </nav>
-          <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
-            <svg fill="none" stroke="currentColor" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
+          <button className="flex gap-x-2">
+            <Link href="/signin" passHref>
+              <a className='text-blue-600  px-4 py-1 bg-sky-200 transition-all hover:text-white hover:bg-sky-500 rounded-md text-md font-bold'>Sign in</a>
+            </Link>
+            <Link href="/signup" passHref>
+              <a className='text-blue-600  px-3 py-1 bg-sky-200 transition-all hover:text-white hover:bg-sky-500 rounded-md text-md font-bold'>Sign Up</a>
+            </Link>
+
+
           </button>
         </div>
       </header>
