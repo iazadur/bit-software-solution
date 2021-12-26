@@ -6,10 +6,11 @@ import Link from 'next/link';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const title = router.pathname.split('/')[1]
   return (
     <>
       <Head>
-        <title>{router.pathname.split('/')[1]} || iazadur </title>
+        <title>{title ? `${title.toLocaleUpperCase()} ~` : "HOME ~"}  IAZADUR </title>
         <meta name="description" content="THis is bebaha web app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         <div className="container mx-auto flex flex-wrap py-3 flex-col md:flex-row items-center fixed top-0 right-0 left-0">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <Link href="/" passHref>
-              <a className=' font-bold ml-3 text-3xl'>Shawarmer</a>
+              <span className=' font-bold ml-3 text-3xl cursor-pointer'>Shawarmer</span>
             </Link>
 
           </a>
