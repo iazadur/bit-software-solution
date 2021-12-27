@@ -24,11 +24,8 @@ export default function Home({ post }) {
 
 
   const handleSearch = (se) => {
-    // if (se === '') {
-    //   setSearch(null)
-    // }
     console.log(se);
-    axios.get("http://localhost:3000/api/posts")
+    axios.get("https://new-iazadur.vercel.app/api/posts")
       .then(res => {
         if (se === '') {
           setSearch(null)
