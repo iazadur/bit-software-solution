@@ -25,7 +25,7 @@ export default function Home({ post }) {
 
   const handleSearch = (se) => {
     console.log(se);
-    axios.get("https://new-iazadur.vercel.app/api/posts")
+    axios.get("https://new-mukea1yjd-iazadur.vercel.app/api/posts")
       .then(res => {
         if (se === '') {
           setSearch(null)
