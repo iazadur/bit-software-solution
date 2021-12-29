@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import { useRouter } from "next/router";
 import Head from 'next/head';
-import Header from '../Components/Header';
+// import Header from '../Components/Header';
 // import '../src/config/Firebase.config'
 // import AuthProvider from '../src/Contexts/AuthProvider';
 
@@ -17,9 +17,42 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="THis is bebaha web app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     <Header />
+      <header className="text-gray-100 relative body-font mb-4 h-16  ">
+        <div className="fixed top-0 right-0 left-0 bg-cyan-600">
+          <div className="container mx-auto flex flex-wrap py-3 flex-col md:flex-row items-center ">
+            <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+              <Link href="/" passHref>
+                <span className=' font-bold ml-3 text-3xl cursor-pointer'>Shawarmer</span>
+              </Link>
+
+            </a>
+            <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+
+              <Link href="/" passHref>
+                <a className='mr-5 hover:text-gray-900 font-bold'>Home</a>
+              </Link>
+              <Link href="/" passHref>
+                <a className='mr-5 hover:text-gray-900 font-bold'>Knowlage books</a>
+              </Link>
+              <Link href="/" passHref>
+                <a className='mr-5 hover:text-gray-900 font-bold'>HR</a>
+              </Link>
+            </nav>
+            <button className="flex gap-x-2">
+              <Link href="/signin" passHref>
+                <a className='text-blue-600  px-4 py-1 bg-sky-200 transition-all hover:text-white hover:bg-sky-500 rounded-md text-md font-bold'>Sign in</a>
+              </Link>
+              <Link href="/signup" passHref>
+                <a className='text-blue-600  px-3 py-1 bg-sky-200 transition-all hover:text-white hover:bg-sky-500 rounded-md text-md font-bold'>Sign Up</a>
+              </Link>
+
+
+            </button>
+          </div>
+        </div>
+      </header>
       {/* <AuthProvider> */}
-        <Component {...pageProps} />
+      <Component {...pageProps} />
       {/* </AuthProvider> */}
     </>
   )
