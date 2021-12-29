@@ -25,7 +25,7 @@ export default function Home({ post }) {
 
   const handleSearch = (se) => {
     console.log(se);
-    axios.get("https://new-mukea1yjd-iazadur.vercel.app/api/posts")
+    axios.get("http://localhost:3000//api/posts")
       .then(res => {
         if (se === '') {
           setSearch(null)
@@ -38,7 +38,6 @@ export default function Home({ post }) {
       })
   }
 
-  console.log(search);
   return (
     <>
       <div className="-mt-6">

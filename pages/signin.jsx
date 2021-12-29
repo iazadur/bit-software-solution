@@ -23,9 +23,9 @@ const signin = () => {
                     </div>
                     <button className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button>
                     <p className="text-base text-gray-500 mt-3">{`You don't have an Account? `}
-                    <Link href="/signup" passHref>
-                        <a className='text-blue-600 font-semibold '>Create An account</a>
-                    </Link>
+                        <Link href="/signup" passHref>
+                            <a className='text-blue-600 font-semibold '>Create An account</a>
+                        </Link>
                     </p>
                 </div>
             </div>
