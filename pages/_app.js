@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import { useRouter } from "next/router";
 import Head from 'next/head';
-// import Header from '../Components/Header';
+import Link from 'next/link';
 // import '../src/config/Firebase.config'
 // import AuthProvider from '../src/Contexts/AuthProvider';
 
@@ -17,9 +17,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="THis is bebaha web app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="text-gray-100 relative body-font mb-4 h-16  ">
-        <div className="fixed top-0 right-0 left-0 bg-cyan-600">
-          <div className="container mx-auto flex flex-wrap py-3 flex-col md:flex-row items-center ">
+      <header className="relative bg-cyan-600">
+        <div className="text-gray-100 body-font  mb-4 h-16 bg-cyan-600 fixed top-0 right-0 left-0">
+          <div className="container mx-auto flex flex-wrap py-3 flex-col md:flex-row items-center  bg-cyan-600">
             <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
               <Link href="/" passHref>
                 <span className=' font-bold ml-3 text-3xl cursor-pointer'>Shawarmer</span>
