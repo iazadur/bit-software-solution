@@ -6,7 +6,7 @@ const Header = () => {
         <>
             <div className="relative mb-20">
                 <header className="text-gray-100 body-font  mb-4 h-16 bg-cyan-600 fixed top-0 right-0 left-0">
-                    <div className="container mx-auto flex flex-wrap py-3 flex-col md:flex-row items-center ">
+                    <div className="container mx-auto flex flex-wrap py-3 flex-col md:flex-row md:justify-between items-center ">
                         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                             <Link href="/" passHref>
                                 <span className=' font-bold ml-3 text-3xl cursor-pointer'>Shawarmer</span>

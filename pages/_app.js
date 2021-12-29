@@ -1,7 +1,6 @@
 import '../styles/globals.css'
 import { useRouter } from "next/router";
 import Head from 'next/head';
-import Link from 'next/link';
 import Header from '../Components/Header';
 // import '../src/config/Firebase.config'
 // import AuthProvider from '../src/Contexts/AuthProvider';
